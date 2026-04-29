@@ -1,14 +1,18 @@
 <!doctype html>
 <html lang="en" class="h-full">
- <head>
+
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Samyojak — Custom business automations and proprietary apps to streamline your workflow.">
+  <meta name="description"
+    content="Samyojak — Custom business automations and proprietary apps to streamline your workflow.">
   <title>Samyojak — Automations &amp; Apps</title>
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
   <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap"
+    rel="stylesheet">
   <script>
     tailwind.config = {
       theme: {
@@ -22,7 +26,9 @@
     }
   </script>
   <style>
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     :root {
       --bg-color: #050810;
@@ -38,9 +44,9 @@
 
     .gradient-mesh {
       background:
-        radial-gradient(ellipse 120% 80% at 5% 15%, rgba(56,189,248,0.25) 0%, transparent 50%),
-        radial-gradient(ellipse 100% 90% at 95% 85%, rgba(236,72,153,0.15) 0%, transparent 50%),
-        radial-gradient(ellipse 80% 70% at 50% 50%, rgba(168,85,247,0.08) 0%, transparent 60%);
+        radial-gradient(ellipse 120% 80% at 5% 15%, rgba(56, 189, 248, 0.25) 0%, transparent 50%),
+        radial-gradient(ellipse 100% 90% at 95% 85%, rgba(236, 72, 153, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse 80% 70% at 50% 50%, rgba(168, 85, 247, 0.08) 0%, transparent 60%);
       position: relative;
     }
 
@@ -61,49 +67,94 @@
     }
 
     .card-glow {
-      box-shadow: 0 0 80px rgba(56,189,248,0.25), 0 15px 60px rgba(56,189,248,0.15), inset 0 1px 3px rgba(255,255,255,0.15);
-      border: 1.5px solid rgba(56,189,248,0.25);
+      box-shadow: 0 0 80px rgba(56, 189, 248, 0.25), 0 15px 60px rgba(56, 189, 248, 0.15), inset 0 1px 3px rgba(255, 255, 255, 0.15);
+      border: 1.5px solid rgba(56, 189, 248, 0.25);
     }
 
     .card-glow:hover {
-      box-shadow: 0 0 120px rgba(56,189,248,0.4), 0 25px 80px rgba(56,189,248,0.25), inset 0 1px 4px rgba(255,255,255,0.2);
-      border-color: rgba(56,189,248,0.5);
+      box-shadow: 0 0 120px rgba(56, 189, 248, 0.4), 0 25px 80px rgba(56, 189, 248, 0.25), inset 0 1px 4px rgba(255, 255, 255, 0.2);
+      border-color: rgba(56, 189, 248, 0.5);
     }
 
     .nav-blur {
       background: rgba(5, 8, 16, 0.5);
       backdrop-filter: blur(40px) saturate(200%);
       -webkit-backdrop-filter: blur(40px) saturate(200%);
-      border-bottom: 1.5px solid rgba(255,255,255,0.12);
-      box-shadow: 0 12px 48px rgba(0,0,0,0.4), inset 0 1px 2px rgba(255,255,255,0.1);
+      border-bottom: 1.5px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 12px 48px rgba(0, 0, 0, 0.4), inset 0 1px 2px rgba(255, 255, 255, 0.1);
     }
 
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(32px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(32px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     @keyframes slideIn {
-      from { opacity: 0; transform: translateX(-20px); }
-      to { opacity: 1; transform: translateX(0); }
+      from {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
     }
 
     @keyframes pulse-ring {
-      0% { transform: scale(1); opacity: 0.6; }
-      100% { transform: scale(1.8); opacity: 0; }
+      0% {
+        transform: scale(1);
+        opacity: 0.6;
+      }
+
+      100% {
+        transform: scale(1.8);
+        opacity: 0;
+      }
     }
 
     @keyframes glow-pulse {
-      0%, 100% { box-shadow: 0 0 20px rgba(56,189,248,0.4), 0 0 40px rgba(56,189,248,0.2); }
-      50% { box-shadow: 0 0 30px rgba(56,189,248,0.6), 0 0 60px rgba(56,189,248,0.3); }
+
+      0%,
+      100% {
+        box-shadow: 0 0 20px rgba(56, 189, 248, 0.4), 0 0 40px rgba(56, 189, 248, 0.2);
+      }
+
+      50% {
+        box-shadow: 0 0 30px rgba(56, 189, 248, 0.6), 0 0 60px rgba(56, 189, 248, 0.3);
+      }
     }
 
-    .anim-fade-up { animation: fadeUp 0.8s ease-out both; }
-    .anim-fade-up-d1 { animation: fadeUp 0.8s ease-out 0.12s both; }
-    .anim-fade-up-d2 { animation: fadeUp 0.8s ease-out 0.24s both; }
-    .anim-fade-up-d3 { animation: fadeUp 0.8s ease-out 0.36s both; }
-    .anim-fade-up-d4 { animation: fadeUp 0.8s ease-out 0.48s both; }
-    .anim-slide-in { animation: slideIn 0.6s ease-out both; }
+    .anim-fade-up {
+      animation: fadeUp 0.8s ease-out both;
+    }
+
+    .anim-fade-up-d1 {
+      animation: fadeUp 0.8s ease-out 0.12s both;
+    }
+
+    .anim-fade-up-d2 {
+      animation: fadeUp 0.8s ease-out 0.24s both;
+    }
+
+    .anim-fade-up-d3 {
+      animation: fadeUp 0.8s ease-out 0.36s both;
+    }
+
+    .anim-fade-up-d4 {
+      animation: fadeUp 0.8s ease-out 0.48s both;
+    }
+
+    .anim-slide-in {
+      animation: slideIn 0.6s ease-out both;
+    }
 
     .pulse-dot {
       position: relative;
@@ -127,6 +178,7 @@
       transform: translateY(24px);
       transition: opacity 0.7s ease-out, transform 0.7s ease-out;
     }
+
     .scroll-reveal.revealed {
       opacity: 1;
       transform: translateY(0);
@@ -147,7 +199,7 @@
       right: -50%;
       width: 200%;
       height: 200%;
-      background: radial-gradient(circle, rgba(56,189,248,0.2) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(56, 189, 248, 0.2) 0%, transparent 70%);
       opacity: 0;
       transition: opacity 0.4s ease;
       pointer-events: none;
@@ -159,13 +211,13 @@
 
     .product-card:hover {
       transform: translateY(-12px) scale(1.03);
-      box-shadow: 0 30px 80px rgba(56,189,248,0.25), inset 0 1px 3px rgba(255,255,255,0.15);
-      border-color: rgba(56,189,248,0.4);
+      box-shadow: 0 30px 80px rgba(56, 189, 248, 0.25), inset 0 1px 3px rgba(255, 255, 255, 0.15);
+      border-color: rgba(56, 189, 248, 0.4);
     }
 
     .btn-primary {
       background: linear-gradient(135deg, var(--primary-action), var(--primary-action-end));
-      box-shadow: 0 4px 20px rgba(56,189,248,0.3);
+      box-shadow: 0 4px 20px rgba(56, 189, 248, 0.3);
       transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
       position: relative;
       overflow: hidden;
@@ -179,7 +231,7 @@
       width: 0;
       height: 0;
       border-radius: 50%;
-      background: rgba(255,255,255,0.3);
+      background: rgba(255, 255, 255, 0.3);
       transform: translate(-50%, -50%);
       transition: width 0.6s, height 0.6s;
       pointer-events: none;
@@ -187,7 +239,7 @@
 
     .btn-primary:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 32px rgba(56,189,248,0.4);
+      box-shadow: 0 8px 32px rgba(56, 189, 248, 0.4);
       filter: brightness(1.15);
     }
 
@@ -204,51 +256,91 @@
     }
 
     .premium-border {
-      border: 1px solid rgba(56,189,248,0.2);
-      box-shadow: inset 0 1px 2px rgba(255,255,255,0.04), 0 0 30px rgba(56,189,248,0.08);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.04), 0 0 30px rgba(56, 189, 248, 0.08);
     }
 
     .glow-accent {
       animation: glow-pulse 3s ease-in-out infinite;
     }
   </style>
-  <style>body { box-sizing: border-box; }</style>
+  <style>
+    body {
+      box-sizing: border-box;
+    }
+  </style>
   <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
   <script src="/_sdk/element_sdk.js" type="text/javascript"></script>
- </head>
- <body class="h-full" style="background-color: var(--bg-color); color: var(--text-color); font-family: 'Outfit', sans-serif;">
+</head>
+
+<body class="h-full"
+  style="background-color: var(--bg-color); color: var(--text-color); font-family: 'Outfit', sans-serif;">
   <div id="app-wrapper" class="w-full h-full overflow-auto">
-   <!-- Navigation -->
-   <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 nav-blur">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-     <div class="flex items-center justify-between h-16">
-      <a href="#hero" class="flex items-center gap-2">
-       <div class="w-8 h-8 rounded-lg flex items-center justify-center glow-accent" style="background: linear-gradient(135deg, var(--primary-action), var(--secondary-action));">
-        <i data-lucide="zap" style="width:18px;height:18px;color:#fff;"></i>
-       </div><span class="font-bold text-lg tracking-tight" style="color: var(--text-color);">Samyojak</span> </a>
-      <div class="hidden md:flex items-center gap-8">
-       <a href="#services" class="text-sm font-medium opacity-60 hover:opacity-100 transition-opacity" style="color: var(--text-color);">Services</a> <a href="#products" class="text-sm font-medium opacity-60 hover:opacity-100 transition-opacity" style="color: var(--text-color);">Products</a> <a href="#about" class="text-sm font-medium opacity-60 hover:opacity-100 transition-opacity" style="color: var(--text-color);">About</a> <a href="#contact" class="text-sm font-medium opacity-60 hover:opacity-100 transition-opacity" style="color: var(--text-color);">Contact</a> <a href="#contact" class="btn-primary px-5 py-2 rounded-full text-sm font-semibold text-white">Get a Quote</a>
-      </div><button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-white/5 transition-colors"> <i data-lucide="menu" style="width:24px;height:24px;color:var(--text-color);"></i> </button>
-     </div>
-    </div><!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden border-t glass-card rounded-b-2xl mx-4 mt-2" style="background: rgba(10, 14, 26, 0.95); border-color: rgba(255,255,255,0.06);">
-     <div class="px-4 py-4 space-y-3">
-      <a href="#services" class="block text-sm font-medium py-2 opacity-60 hover:opacity-100" style="color: var(--text-color);">Services</a> <a href="#products" class="block text-sm font-medium py-2 opacity-60 hover:opacity-100" style="color: var(--text-color);">Products</a> <a href="#about" class="block text-sm font-medium py-2 opacity-60 hover:opacity-100" style="color: var(--text-color);">About</a> <a href="#contact" class="block text-sm font-medium py-2 opacity-60 hover:opacity-100" style="color: var(--text-color);">Contact</a> <a href="#contact" class="btn-primary block text-center px-5 py-2.5 rounded-full text-sm font-semibold text-white mt-2">Get a Quote</a>
-     </div>
-    </div>
-   </nav><!-- Hero Section -->
-   <section id="hero" class="relative gradient-mesh" style="padding-top: 120px; padding-bottom: 100px;">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-     <div class="max-w-3xl mx-auto text-center">
-      <div class="anim-fade-up inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-mono font-medium mb-8 glass-card" style="color: var(--primary-action);">
-       <span class="pulse-dot" style="color: var(--primary-action);"></span> Now accepting new automation clients
+    <!-- Navigation -->
+    <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 nav-blur">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <a href="#hero" class="flex items-center gap-2">
+            <div class="w-8 h-8 rounded-lg flex items-center justify-center glow-accent"
+              style="background: linear-gradient(135deg, var(--primary-action), var(--secondary-action));">
+              <i data-lucide="zap" style="width:18px;height:18px;color:#fff;"></i>
+            </div><span class="font-bold text-lg tracking-tight" style="color: var(--text-color);">Samyojak</span>
+          </a>
+          <div class="hidden md:flex items-center gap-8">
+            <a href="#services" class="text-sm font-medium opacity-60 hover:opacity-100 transition-opacity"
+              style="color: var(--text-color);">Services</a> <a href="#products"
+              class="text-sm font-medium opacity-60 hover:opacity-100 transition-opacity"
+              style="color: var(--text-color);">Products</a> <a href="#about"
+              class="text-sm font-medium opacity-60 hover:opacity-100 transition-opacity"
+              style="color: var(--text-color);">About</a> <a href="#contact"
+              class="text-sm font-medium opacity-60 hover:opacity-100 transition-opacity"
+              style="color: var(--text-color);">Contact</a> <a href="#contact"
+              class="btn-primary px-5 py-2 rounded-full text-sm font-semibold text-white">Get a Quote</a>
+          </div><button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-white/5 transition-colors"> <i
+              data-lucide="menu" style="width:24px;height:24px;color:var(--text-color);"></i> </button>
+        </div>
+      </div><!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden border-t glass-card rounded-b-2xl mx-4 mt-2"
+        style="background: rgba(10, 14, 26, 0.95); border-color: rgba(255,255,255,0.06);">
+        <div class="px-4 py-4 space-y-3">
+          <a href="#services" class="block text-sm font-medium py-2 opacity-60 hover:opacity-100"
+            style="color: var(--text-color);">Services</a> <a href="#products"
+            class="block text-sm font-medium py-2 opacity-60 hover:opacity-100"
+            style="color: var(--text-color);">Products</a> <a href="#about"
+            class="block text-sm font-medium py-2 opacity-60 hover:opacity-100"
+            style="color: var(--text-color);">About</a> <a href="#contact"
+            class="block text-sm font-medium py-2 opacity-60 hover:opacity-100"
+            style="color: var(--text-color);">Contact</a> <a href="#contact"
+            class="btn-primary block text-center px-5 py-2.5 rounded-full text-sm font-semibold text-white mt-2">Get a
+            Quote</a>
+        </div>
       </div>
-      <h1 id="hero-headline" class="anim-fade-up-d1 text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight" style="color: var(--text-color);">Automate Your Business.<br><span class="app-section-title">Ship Smarter Apps.</span></h1>
-      <p id="hero-subheadline" class="anim-fade-up-d2 mt-6 text-lg sm:text-xl leading-relaxed opacity-70 max-w-2xl mx-auto" style="color: var(--text-color);">We build small, custom automations that eliminate repetitive work — and craft proprietary apps that give your business a competitive edge.</p>
-      <div class="anim-fade-up-d3 flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
-       <a href="#services" id="hero-cta" class="btn-primary px-8 py-3.5 rounded-full text-base font-semibold text-white">Explore Our Services</a> <a href="#products" class="px-8 py-3.5 rounded-full text-base font-semibold border transition-all hover:bg-white/5" style="color: var(--text-color); border-color: rgba(255,255,255,0.15);"> Browse Apps </a>
-      </div><!-- Stats -->
-      <div class="anim-fade-up-d4 grid grid-cols-3 gap-6 mt-16 max-w-lg mx-auto">
+    </nav><!-- Hero Section -->
+    <section id="hero" class="relative gradient-mesh" style="padding-top: 120px; padding-bottom: 100px;">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center">
+          <div
+            class="anim-fade-up inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-mono font-medium mb-8 glass-card"
+            style="color: var(--primary-action);">
+            <span class="pulse-dot" style="color: var(--primary-action);"></span> Now accepting new automation clients
+          </div>
+          <h1 id="hero-headline"
+            class="anim-fade-up-d1 text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight"
+            style="color: var(--text-color);">Automate Your Business.<br><span class="app-section-title">Ship Smarter
+              Apps.</span></h1>
+          <p id="hero-subheadline"
+            class="anim-fade-up-d2 mt-6 text-lg sm:text-xl leading-relaxed opacity-70 max-w-2xl mx-auto"
+            style="color: var(--text-color);">We build small, custom automations that eliminate repetitive work — and
+            craft proprietary apps that give your business a competitive edge.</p>
+          <div class="anim-fade-up-d3 flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
+            <a href="#services" id="hero-cta"
+              class="btn-primary px-8 py-3.5 rounded-full text-base font-semibold text-white">Explore Our Services</a>
+            <a href="#products"
+              class="px-8 py-3.5 rounded-full text-base font-semibold border transition-all hover:bg-white/5"
+              style="color: var(--text-color); border-color: rgba(255,255,255,0.15);"> Browse Apps </a>
+          </div>
+          <!-- Stats -->
+          <!-- <div class="anim-fade-up-d4 grid grid-cols-3 gap-6 mt-16 max-w-lg mx-auto">
        <div>
         <div class="text-2xl sm:text-3xl font-bold" style="color: var(--primary-action);">
          200+
@@ -273,361 +365,585 @@
          Uptime
         </div>
        </div>
+      </div> -->
+        </div>
       </div>
-     </div>
+    </section>
+    <!-- Trusted By -->
+    <!-- <section class="py-12 border-y" style="border-color: rgba(255,255,255,0.04);">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p class="text-center text-xs font-medium uppercase tracking-widest opacity-30 mb-8">Trusted by forward-thinking
+          teams</p>
+        <div class="flex flex-wrap items-center justify-center gap-8 sm:gap-12 opacity-30">
+          <span class="font-bold text-lg tracking-tight">Acme Corp</span> <span
+            class="font-bold text-lg tracking-tight">Vertex AI</span> <span
+            class="font-bold text-lg tracking-tight">Lunar</span> <span
+            class="font-bold text-lg tracking-tight">Streamline</span> <span
+            class="font-bold text-lg tracking-tight">PixelForge</span>
+        </div>
+      </div>
+    </section> -->
+    <!-- Services Section -->
+    <section id="services" class="py-20 sm:py-28">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-16 scroll-reveal">
+          <span class="text-xs font-mono font-medium uppercase tracking-widest"
+            style="color: var(--primary-action);">Services</span>
+          <h2 class="text-3xl sm:text-4xl font-bold mt-3" style="color: var(--text-color);">Small Automations, Big
+            Impact</h2>
+          <p class="mt-4 opacity-60 leading-relaxed">We identify bottlenecks in your workflow and replace them with
+            custom, reliable automations — so you can focus on growth.</p>
+        </div><!-- Pricing Tiers -->
+        <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
+          <!-- Starter -->
+          <div class="scroll-reveal glass-card rounded-2xl p-6 sm:p-8 card-glow"
+            style="border-color: rgba(255,255,255,0.08);">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5"
+              style="background: rgba(56,189,248,0.15);">
+              <i data-lucide="mail" style="width:22px;height:22px;color:var(--primary-action);"></i>
+            </div>
+            <h3 class="text-xl font-bold" style="color: var(--text-color);">Starter</h3>
+            <p class="mt-2 text-sm opacity-50">Perfect for solopreneurs with simple workflow needs.</p>
+            <div class="mt-6 mb-6">
+              <span class="text-4xl font-extrabold" style="color: var(--text-color);">₹299</span> <span
+                class="text-sm opacity-40 ml-1">one-time</span>
+            </div>
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-start gap-2.5 text-sm"><i data-lucide="check"
+                  style="width:16px;height:16px;color:var(--primary-action);flex-shrink:0;margin-top:2px;"></i><span
+                  class="opacity-70">1 Zapier / Make integration</span></li>
+              <li class="flex items-start gap-2.5 text-sm"><i data-lucide="check"
+                  style="width:16px;height:16px;color:var(--primary-action);flex-shrink:0;margin-top:2px;"></i><span
+                  class="opacity-70">Email workflow automation</span></li>
+              <li class="flex items-start gap-2.5 text-sm"><i data-lucide="check"
+                  style="width:16px;height:16px;color:var(--primary-action);flex-shrink:0;margin-top:2px;"></i><span
+                  class="opacity-70">Basic data sync</span></li>
+              <li class="flex items-start gap-2.5 text-sm"><i data-lucide="check"
+                  style="width:16px;height:16px;color:var(--primary-action);flex-shrink:0;margin-top:2px;"></i><span
+                  class="opacity-70">7-day delivery</span></li>
+            </ul><a href="#contact"
+              class="block text-center w-full py-3 rounded-full text-sm font-semibold border transition-all hover:bg-white/5"
+              style="color: var(--primary-action); border-color: rgba(56,189,248,0.3);">Get Started</a>
+          </div><!-- Professional (Featured) -->
+          <div class="scroll-reveal glass-card rounded-2xl p-6 sm:p-8 card-glow relative transition-all"
+            style="border: 2px solid rgba(56,189,248,0.3);">
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full text-xs font-bold text-white"
+              style="background: linear-gradient(135deg, var(--primary-action), var(--secondary-action));">
+              Most Popular
+            </div>
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5"
+              style="background: rgba(56,189,248,0.15);">
+              <i data-lucide="settings" style="width:22px;height:22px;color:var(--primary-action);"></i>
+            </div>
+            <h3 class="text-xl font-bold" style="color: var(--text-color);">Professional</h3>
+            <p class="mt-2 text-sm opacity-50">Multi-step automations for growing teams.</p>
+            <div class="mt-6 mb-6">
+              <span class="text-4xl font-extrabold" style="color: var(--text-color);">₹799</span> <span
+                class="text-sm opacity-40 ml-1">one-time</span>
+            </div>
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-start gap-2.5 text-sm"><i data-lucide="check"
+                  style="width:16px;height:16px;color:var(--primary-action);flex-shrink:0;margin-top:2px;"></i><span
+                  class="opacity-70">Up to 5 integrations</span></li>
+              <li class="flex items-start gap-2.5 text-sm"><i data-lucide="check"
+                  style="width:16px;height:16px;color:var(--primary-action);flex-shrink:0;margin-top:2px;"></i><span
+                  class="opacity-70">Data entry scripts</span></li>
+              <li class="flex items-start gap-2.5 text-sm"><i data-lucide="check"
+                  style="width:16px;height:16px;color:var(--primary-action);flex-shrink:0;margin-top:2px;"></i><span
+                  class="opacity-70">CRM &amp; calendar sync</span></li>
+              <li class="flex items-start gap-2.5 text-sm"><i data-lucide="check"
+                  style="width:16px;height:16px;color:var(--primary-action);flex-shrink:0;margin-top:2px;"></i><span
+                  class="opacity-70">30-day support included</span></li>
+            </ul><a href="#contact"
+              class="btn-primary block text-center w-full py-3 rounded-full text-sm font-semibold text-white">Get
+              Started</a>
+          </div><!-- Enterprise -->
+          <div class="scroll-reveal glass-card rounded-2xl p-6 sm:p-8 card-glow"
+            style="border-color: rgba(255,255,255,0.08);">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5"
+              style="background: rgba(167,139,250,0.15);">
+              <i data-lucide="layers" style="width:22px;height:22px;color:var(--secondary-action);"></i>
+            </div>
+            <h3 class="text-xl font-bold" style="color: var(--text-color);">Enterprise</h3>
+            <p class="mt-2 text-sm opacity-50">Full-scale automation suites for complex ops.</p>
+            <div class="mt-6 mb-6">
+              <span class="text-4xl font-extrabold" style="color: var(--text-color);">Custom</span>
+            </div>
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-start gap-2.5 text-sm"><i data-lucide="check"
+                  style="width:16px;height:16px;color:var(--secondary-action);flex-shrink:0;margin-top:2px;"></i><span
+                  class="opacity-70">Unlimited integrations</span></li>
+              <li class="flex items-start gap-2.5 text-sm"><i data-lucide="check"
+                  style="width:16px;height:16px;color:var(--secondary-action);flex-shrink:0;margin-top:2px;"></i><span
+                  class="opacity-70">Custom scripts &amp; API work</span></li>
+              <li class="flex items-start gap-2.5 text-sm"><i data-lucide="check"
+                  style="width:16px;height:16px;color:var(--secondary-action);flex-shrink:0;margin-top:2px;"></i><span
+                  class="opacity-70">Dedicated project manager</span></li>
+              <li class="flex items-start gap-2.5 text-sm"><i data-lucide="check"
+                  style="width:16px;height:16px;color:var(--secondary-action);flex-shrink:0;margin-top:2px;"></i><span
+                  class="opacity-70">90-day priority support</span></li>
+            </ul><a href="#contact"
+              class="block text-center w-full py-3 rounded-full text-sm font-semibold border transition-all hover:bg-white/5"
+              style="color: var(--secondary-action); border-color: rgba(167,139,250,0.3);">Contact Sales</a>
+          </div>
+        </div><!-- Problem vs Solution -->
+        <div class="mt-20 grid md:grid-cols-2 gap-8">
+          <div class="scroll-reveal glass-card rounded-2xl p-8"
+            style="background: rgba(239, 68, 68, 0.08); border-color: rgba(239, 68, 68, 0.2);">
+            <div class="flex items-center gap-3 mb-5">
+              <i data-lucide="x-circle" style="width:22px;height:22px;color:#ef4444;"></i>
+              <h3 class="text-lg font-bold" style="color: #ef4444;">The Problem</h3>
+            </div>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-2.5 text-sm opacity-70"><span>•</span>Hours wasted on manual data entry
+                every week</li>
+              <li class="flex items-start gap-2.5 text-sm opacity-70"><span>•</span>Missed follow-ups due to
+                disconnected tools</li>
+              <li class="flex items-start gap-2.5 text-sm opacity-70"><span>•</span>Error-prone spreadsheets slowing
+                your team</li>
+              <li class="flex items-start gap-2.5 text-sm opacity-70"><span>•</span>Scaling feels impossible without
+                more hires</li>
+            </ul>
+          </div>
+          <div class="scroll-reveal glass-card rounded-2xl p-8"
+            style="background: rgba(56, 189, 248, 0.08); border-color: rgba(56, 189, 248, 0.2);">
+            <div class="flex items-center gap-3 mb-5">
+              <i data-lucide="check-circle" style="width:22px;height:22px;color:var(--primary-action);"></i>
+              <h3 class="text-lg font-bold" style="color: var(--primary-action);">Our Solution</h3>
+            </div>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-2.5 text-sm opacity-70"><span>•</span>Automated data flows between all
+                your tools</li>
+              <li class="flex items-start gap-2.5 text-sm opacity-70"><span>•</span>Smart triggers that never miss a
+                follow-up</li>
+              <li class="flex items-start gap-2.5 text-sm opacity-70"><span>•</span>Error-free processes running 24/7
+              </li>
+              <li class="flex items-start gap-2.5 text-sm opacity-70"><span>•</span>Scale operations without scaling
+                headcount</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section><!-- Products Section -->
+    <section id="products" class="py-20 sm:py-28 border-t" style="border-color: rgba(255,255,255,0.04);">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-16 scroll-reveal">
+          <span class="text-xs font-mono font-medium uppercase tracking-widest"
+            style="color: var(--secondary-action);">Products</span>
+          <h2 class="text-3xl sm:text-4xl font-bold mt-3" style="color: var(--text-color);">Our Apps</h2>
+          <p class="mt-4 opacity-60 leading-relaxed">Purpose-built applications designed to solve real business
+            problems, right out of the box.</p>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Product 1 -->
+          <div class="scroll-reveal product-card glass-card rounded-2xl border overflow-hidden card-glow">
+            <div class="h-44 flex items-center justify-center"
+              style="background: linear-gradient(135deg, rgba(56,189,248,0.2), rgba(168,85,247,0.12));">
+              <div class="w-20 h-20 rounded-2xl flex items-center justify-center"
+                style="background: rgba(56,189,248,0.25);">
+                <i data-lucide="bar-chart-3" style="width:36px;height:36px;color:var(--primary-action);"></i>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between mb-2">
+                <h3 class="text-lg font-bold" style="color: var(--text-color);">Auto Reply Bot</h3><span
+                  class="text-xs font-mono px-2 py-0.5 rounded-full glass-card"
+                  style="border: 1px solid rgba(56,189,248,0.2); color: var(--primary-action);">v2.1</span>
+              </div>
+              <p class="text-sm opacity-50 mb-4 leading-relaxed">Real-time dashboard for tracking automation KPIs and
+                ROI across all your workflows.</p>
+              <div class="flex items-center justify-between">
+                <span class="text-2xl font-bold" style="color: var(--text-color);">₹499<span
+                    class="text-sm font-normal opacity-40">/mo</span></span> 
+                <div class="flex items-center gap-2">
+                  <button class="px-4 py-2 rounded-full text-sm font-semibold border transition-all hover:bg-white/5" style="color: var(--text-color); border-color: rgba(255,255,255,0.15);" onclick="handleTrial('AutoReplyBot')">Trial</button>
+                  <button class="btn-primary px-5 py-2 rounded-full text-sm font-semibold text-white" onclick="handleBuy('AutoReplyBot')">Buy Now</button>
+                </div>
+              </div>
+            </div>
+          </div><!-- Product 2 -->
+          <div class="scroll-reveal product-card glass-card rounded-2xl border overflow-hidden card-glow">
+            <div class="h-44 flex items-center justify-center"
+              style="background: linear-gradient(135deg, rgba(167,139,250,0.2), rgba(236,72,153,0.12));">
+              <div class="w-20 h-20 rounded-2xl flex items-center justify-center"
+                style="background: rgba(167,139,250,0.25);">
+                <i data-lucide="file-text" style="width:36px;height:36px;color:var(--secondary-action);"></i>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between mb-2">
+                <h3 class="text-lg font-bold" style="color: var(--text-color);">DocPilot</h3><span
+                  class="text-xs font-mono px-2 py-0.5 rounded-full glass-card"
+                  style="border: 1px solid rgba(167,139,250,0.2); color: var(--secondary-action);">v1.4</span>
+              </div>
+              <p class="text-sm opacity-50 mb-4 leading-relaxed">Auto-generate proposals, invoices, and contracts from
+                your CRM data in seconds.</p>
+              <div class="flex items-center justify-between">
+                <span class="text-2xl font-bold" style="color: var(--text-color);">₹299<span
+                    class="text-sm font-normal opacity-40">/mo</span></span> 
+                <div class="flex items-center gap-2">
+                  <button class="px-4 py-2 rounded-full text-sm font-semibold border transition-all hover:bg-white/5" style="color: var(--text-color); border-color: rgba(255,255,255,0.15);" onclick="handleTrial('DocPilot')">Trial</button>
+                  <button class="btn-primary px-5 py-2 rounded-full text-sm font-semibold text-white" onclick="handleBuy('DocPilot')">Buy Now</button>
+                </div>
+              </div>
+            </div>
+          </div><!-- Product 3 -->
+          <div class="scroll-reveal product-card glass-card rounded-2xl border overflow-hidden card-glow">
+            <div class="h-44 flex items-center justify-center"
+              style="background: linear-gradient(135deg, rgba(52,211,153,0.2), rgba(56,189,248,0.12));">
+              <div class="w-20 h-20 rounded-2xl flex items-center justify-center"
+                style="background: rgba(52,211,153,0.25);">
+                <i data-lucide="shield" style="width:36px;height:36px;color:#34d399;"></i>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between mb-2">
+                <h3 class="text-lg font-bold" style="color: var(--text-color);">SyncGuard</h3><span
+                  class="text-xs font-mono px-2 py-0.5 rounded-full glass-card"
+                  style="border: 1px solid rgba(52,211,153,0.2); color: #34d399;">v3.0</span>
+              </div>
+              <p class="text-sm opacity-50 mb-4 leading-relaxed">Monitor and protect all your integrations with
+                real-time error alerts and auto-recovery.</p>
+              <div class="flex items-center justify-between">
+                <span class="text-2xl font-bold" style="color: var(--text-color);">₹399<span
+                    class="text-sm font-normal opacity-40">/mo</span></span> 
+                <div class="flex items-center gap-2">
+                  <button class="px-4 py-2 rounded-full text-sm font-semibold border transition-all hover:bg-white/5" style="color: var(--text-color); border-color: rgba(255,255,255,0.15);" onclick="handleTrial('SyncGuard')">Trial</button>
+                  <button class="btn-primary px-5 py-2 rounded-full text-sm font-semibold text-white" onclick="handleBuy('SyncGuard')">Buy Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><!-- Demo checkout toast -->
+        <div id="buy-toast"
+          class="fixed bottom-6 right-6 z-50 px-6 py-4 rounded-2xl shadow-2xl transition-all duration-500 opacity-0 translate-y-4 pointer-events-none glass-card"
+          style="border: 1px solid rgba(56,189,248,0.2);">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full flex items-center justify-center"
+              style="background: rgba(56,189,248,0.15);">
+              <i data-lucide="shopping-cart" style="width:16px;height:16px;color:var(--primary-action);"></i>
+            </div>
+            <div>
+              <p class="text-sm font-semibold" style="color: var(--text-color);" id="buy-toast-text">Added to cart!</p>
+              <p class="text-xs opacity-50">Demo — payment integration ready</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Testimonials -->
+    <!-- <section class="py-20 sm:py-28 border-t" style="border-color: rgba(255,255,255,0.04);">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 scroll-reveal">
+          <span class="text-xs font-mono font-medium uppercase tracking-widest"
+            style="color: var(--primary-action);">Testimonials</span>
+          <h2 class="text-3xl sm:text-4xl font-bold mt-3" style="color: var(--text-color);">What Our Clients Say</h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="scroll-reveal glass-card rounded-2xl p-6 card-glow">
+            <div class="flex gap-1 mb-4">
+              <i data-lucide="star" style="width:16px;height:16px;color:#fbbf24;fill:#fbbf24;"></i> <i
+                data-lucide="star" style="width:16px;height:16px;color:#fbbf24;fill:#fbbf24;"></i> <i data-lucide="star"
+                style="width:16px;height:16px;color:#fbbf24;fill:#fbbf24;"></i> <i data-lucide="star"
+                style="width:16px;height:16px;color:#fbbf24;fill:#fbbf24;"></i> <i data-lucide="star"
+                style="width:16px;height:16px;color:#fbbf24;fill:#fbbf24;"></i>
+            </div>
+            <p class="text-sm opacity-60 leading-relaxed mb-5">"Samyojak automated our entire client onboarding. What
+              took 3 hours now takes 5 minutes. Absolute game-changer."</p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold text-white"
+                style="background: linear-gradient(135deg, var(--primary-action), var(--secondary-action));">
+                JR
+              </div>
+              <div>
+                <p class="text-sm font-semibold" style="color: var(--text-color);">James R.</p>
+                <p class="text-xs opacity-40">CEO, Vertex AI</p>
+              </div>
+            </div>
+          </div>
+          <div class="scroll-reveal glass-card rounded-2xl p-6 card-glow">
+            <div class="flex gap-1 mb-4">
+              <i data-lucide="star" style="width:16px;height:16px;color:#fbbf24;fill:#fbbf24;"></i> <i
+                data-lucide="star" style="width:16px;height:16px;color:#fbbf24;fill:#fbbf24;"></i> <i data-lucide="star"
+                style="width:16px;height:16px;color:#fbbf24;fill:#fbbf24;"></i> <i data-lucide="star"
+                style="width:16px;height:16px;color:#fbbf24;fill:#fbbf24;"></i> <i data-lucide="star"
+                style="width:16px;height:16px;color:#fbbf24;fill:#fbbf24;"></i>
+            </div>
+            <p class="text-sm opacity-60 leading-relaxed mb-5">"DocPilot generates our proposals in seconds. Our sales
+              team can't imagine going back to the old way."</p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold text-white"
+                style="background: linear-gradient(135deg, #34d399, var(--primary-action));">
+                SM
+              </div>
+              <div>
+                <p class="text-sm font-semibold" style="color: var(--text-color);">Sarah M.</p>
+                <p class="text-xs opacity-40">VP Sales, Streamline</p>
+              </div>
+            </div>
+          </div>
+          <div class="scroll-reveal glass-card rounded-2xl p-6 card-glow">
+            <div class="flex gap-1 mb-4">
+              <i data-lucide="star" style="width:16px;height:16px;color:#fbbf24;fill:#fbbf24;"></i> <i
+                data-lucide="star" style="width:16px;height:16px;color:#fbbf24;fill:#fbbf24;"></i> <i data-lucide="star"
+                style="width:16px;height:16px;color:#fbbf24;fill:#fbbf24;"></i> <i data-lucide="star"
+                style="width:16px;height:16px;color:#fbbf24;fill:#fbbf24;"></i> <i data-lucide="star"
+                style="width:16px;height:16px;color:#fbbf24;fill:#fbbf24;"></i>
+            </div>
+            <p class="text-sm opacity-60 leading-relaxed mb-5">"Their enterprise automation saved us $120K/year in
+              manual operations. ROI within 2 months."</p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold text-white"
+                style="background: linear-gradient(135deg, var(--secondary-action), #ec4899);">
+                DL
+              </div>
+              <div>
+                <p class="text-sm font-semibold" style="color: var(--text-color);">David L.</p>
+                <p class="text-xs opacity-40">COO, Acme Corp</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <!-- About Section -->
+    <section id="about" class="py-20 sm:py-28 border-t" style="border-color: rgba(255,255,255,0.04);">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div class="scroll-reveal">
+            <span class="text-xs font-mono font-medium uppercase tracking-widest"
+              style="color: var(--primary-action);">About Us</span>
+            <h2 class="text-3xl sm:text-4xl font-bold mt-3 mb-6" style="color: var(--text-color);">Built by Operators,
+              for Operators</h2>
+            <p id="about-mission" class="opacity-60 leading-relaxed mb-4">Our mission is simple: eliminate busywork so
+              businesses can focus on what actually moves the needle — strategy, creativity, and growth.</p>
+            <p id="about-story" class="opacity-60 leading-relaxed mb-8">Samyojak started in 2021 when our founders —
+              ex-operations leads at fast-growing startups — kept building the same automations over and over. We turned
+              that expertise into a service, then into software. Today we serve 50+ companies across 12 industries.</p>
+            <div class="flex flex-wrap gap-4">
+              <div class="flex items-center gap-2 px-4 py-2 rounded-full text-sm"
+                style="background: rgba(56,189,248,0.08); color: var(--primary-action);">
+                <i data-lucide="target" style="width:16px;height:16px;"></i> Mission-Driven
+              </div>
+              <div class="flex items-center gap-2 px-4 py-2 rounded-full text-sm"
+                style="background: rgba(167,139,250,0.08); color: var(--secondary-action);">
+                <i data-lucide="globe" style="width:16px;height:16px;"></i> Remote-First
+              </div>
+              <div class="flex items-center gap-2 px-4 py-2 rounded-full text-sm"
+                style="background: rgba(52,211,153,0.08); color: #34d399;">
+                <i data-lucide="lock" style="width:16px;height:16px;"></i> SOC 2 Compliant
+              </div>
+            </div>
+          </div><!-- Team Grid -->
+          <div class="scroll-reveal grid grid-cols-2 gap-4">
+            <div
+              class="group glass-card rounded-2xl p-8 text-center overflow-hidden border transition-all hover:border-opacity-100"
+              style="border-color: rgba(56,189,248,0.25); background: rgba(56,189,248,0.08);">
+              <div class="relative mb-6">
+                <div
+                  class="w-28 h-28 mx-auto rounded-full flex items-center justify-center text-4xl font-bold text-white transition-transform group-hover:scale-110"
+                  style="background: linear-gradient(135deg, var(--primary-action), var(--secondary-action)); box-shadow: 0 0 40px rgba(56,189,248,0.4);">
+                  PS
+                </div>
+              </div>
+              <p class="text-base font-bold leading-tight" style="color: var(--text-color);">Pranav Shinde</p>
+              <p class="text-xs opacity-50 mt-1.5 font-medium">Co-Founder &amp; Co-CEO</p>
+              <p class="text-xs opacity-40 mt-3 leading-relaxed">Ex-Ops Lead, Built 50+ automations</p>
+            </div>
+            <div
+              class="group glass-card rounded-2xl p-8 text-center overflow-hidden border transition-all hover:border-opacity-100"
+              style="border-color: rgba(167,139,250,0.25); background: rgba(167,139,250,0.08);">
+              <div class="relative mb-6">
+                <div
+                  class="w-28 h-28 mx-auto rounded-full flex items-center justify-center text-4xl font-bold text-white transition-transform group-hover:scale-110"
+                  style="background: linear-gradient(135deg, #34d399, var(--primary-action)); box-shadow: 0 0 40px rgba(52,211,153,0.4);">
+                  AP
+                </div>
+              </div>
+              <p class="text-base font-bold leading-tight" style="color: var(--text-color);">Aditya Patil</p>
+              <p class="text-xs opacity-50 mt-1.5 font-medium">Co-Founder &amp; Co-CEO</p>
+              <p class="text-xs opacity-40 mt-3 leading-relaxed">Growth Expert, 10+ Startups</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- Contact Section -->
+    <section id="contact" class="py-20 sm:py-28 border-t" style="border-color: rgba(255,255,255,0.04);">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-20">
+          <div class="scroll-reveal">
+            <span class="text-xs font-mono font-medium uppercase tracking-widest"
+              style="color: var(--primary-action);">Contact</span>
+            <h2 class="text-3xl sm:text-4xl font-bold mt-3 mb-6" style="color: var(--text-color);">Let's Build Something
+              Together</h2>
+            <p class="opacity-60 leading-relaxed mb-8">Have a workflow you want to automate? A custom app idea? Reach
+              out — we typically respond within 4 hours.</p>
+            <div class="space-y-5">
+              <div class="flex items-center gap-4">
+                <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
+                  style="background: rgba(56,189,248,0.1);">
+                  <i data-lucide="mail" style="width:18px;height:18px;color:var(--primary-action);"></i>
+                </div>
+                <div>
+                  <p class="text-xs opacity-40">Email</p>
+                  <p id="contact-email-display" class="text-sm font-medium" style="color: var(--text-color);">
+                    samyojak7@gmail.com</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-4">
+                <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
+                  style="background: rgba(167,139,250,0.1);">
+                  <i data-lucide="phone" style="width:18px;height:18px;color:var(--secondary-action);"></i>
+                </div>
+                <div>
+                  <p class="text-xs opacity-40">Phone</p>
+                  <p id="contact-phone-display" class="text-sm font-medium" style="color: var(--text-color);">+91</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-4">
+                <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
+                  style="background: rgba(52,211,153,0.1);">
+                  <i data-lucide="map-pin" style="width:18px;height:18px;color:#34d399;"></i>
+                </div>
+                <div>
+                  <p class="text-xs opacity-40">Location</p>
+                  <p class="text-sm font-medium" style="color: var(--text-color);">Gadhinglaj, Dist: Kolhapur</p>
+                </div>
+              </div>
+            </div><!-- Social Links -->
+            <div class="flex items-center gap-3 mt-8">
+              <a href="#"
+                class="w-10 h-10 rounded-xl flex items-center justify-center border transition-all hover:bg-white/5"
+                style="border-color: rgba(255,255,255,0.08);"> <i data-lucide="twitter"
+                  style="width:16px;height:16px;color:var(--text-color);opacity:0.5;"></i> </a> <a href="#"
+                class="w-10 h-10 rounded-xl flex items-center justify-center border transition-all hover:bg-white/5"
+                style="border-color: rgba(255,255,255,0.08);"> <i data-lucide="linkedin"
+                  style="width:16px;height:16px;color:var(--text-color);opacity:0.5;"></i> </a> <a href="#"
+                class="w-10 h-10 rounded-xl flex items-center justify-center border transition-all hover:bg-white/5"
+                style="border-color: rgba(255,255,255,0.08);"> <i data-lucide="github"
+                  style="width:16px;height:16px;color:var(--text-color);opacity:0.5;"></i> </a> <a href="#"
+                class="w-10 h-10 rounded-xl flex items-center justify-center border transition-all hover:bg-white/5"
+                style="border-color: rgba(255,255,255,0.08);"> <i data-lucide="instagram"
+                  style="width:16px;height:16px;color:var(--text-color);opacity:0.5;"></i> </a>
+            </div>
+          </div><!-- Contact Form -->
+          <div class="scroll-reveal">
+            <form id="contact-form" class="rounded-2xl p-6 sm:p-8 border"
+              style="background: var(--surface-color); border-color: rgba(255,255,255,0.06);">
+              <div class="space-y-5">
+                <div>
+                  <label for="form-name" class="block text-sm font-medium mb-2 opacity-70">Full Name</label> <input
+                    type="text" id="form-name" required
+                    class="w-full px-4 py-3 rounded-xl text-sm border focus:outline-none focus:ring-2 transition-all"
+                    style="background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.08); color: var(--text-color); --tw-ring-color: var(--primary-action);"
+                    placeholder="Raj Shintre">
+                </div>
+                <div>
+                  <label for="form-email" class="block text-sm font-medium mb-2 opacity-70">Email Address</label> <input
+                    type="email" id="form-email" required
+                    class="w-full px-4 py-3 rounded-xl text-sm border focus:outline-none focus:ring-2 transition-all"
+                    style="background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.08); color: var(--text-color); --tw-ring-color: var(--primary-action);"
+                    placeholder="raj@company.com">
+                </div>
+                <div>
+                  <label for="form-service" class="block text-sm font-medium mb-2 opacity-70">Service Interested
+                    In</label> <select id="form-service"
+                    class="w-full px-4 py-3 rounded-xl text-sm border focus:outline-none focus:ring-2 transition-all"
+                    style="background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.08); color: var(--text-color); --tw-ring-color: var(--primary-action);">
+                    <option value="" style="background: #111827;">Select a service...</option>
+                    <option value="starter" style="background: #111827;">Starter Automation (₹299)</option>
+                    <option value="professional" style="background: #111827;">Professional Automation (₹799)</option>
+                    <option value="enterprise" style="background: #111827;">Enterprise (Custom)</option>
+                    <option value="app" style="background: #111827;">App Purchase / Demo</option>
+                    <option value="other" style="background: #111827;">Other</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="form-message" class="block text-sm font-medium mb-2 opacity-70">Message</label> <textarea
+                    id="form-message" rows="4" required
+                    class="w-full px-4 py-3 rounded-xl text-sm border focus:outline-none focus:ring-2 transition-all resize-none"
+                    style="background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.08); color: var(--text-color); --tw-ring-color: var(--primary-action);"
+                    placeholder="Tell us about your project..."></textarea>
+                </div><button type="submit" id="submit-btn"
+                  class="btn-primary w-full py-3.5 rounded-xl text-sm font-semibold text-white flex items-center justify-center gap-2">
+                  <i data-lucide="send" style="width:16px;height:16px;"></i> Send Message </button>
+              </div><!-- Form Success -->
+              <div id="form-success" class="hidden text-center py-8">
+                <div class="w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4"
+                  style="background: rgba(52,211,153,0.15);">
+                  <i data-lucide="check" style="width:28px;height:28px;color:#34d399;"></i>
+                </div>
+                <h3 class="text-lg font-bold mb-2" style="color: var(--text-color);">Message Sent!</h3>
+                <p class="text-sm opacity-50">We'll get back to you within 4 hours.</p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section><!-- Footer -->
+    <footer class="py-12 border-t" style="border-color: rgba(255,255,255,0.04);">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+          <div class="flex items-center gap-2">
+            <div class="w-7 h-7 rounded-lg flex items-center justify-center"
+              style="background: linear-gradient(135deg, var(--primary-action), var(--secondary-action));">
+              <i data-lucide="zap" style="width:14px;height:14px;color:#fff;"></i>
+            </div><span class="font-bold tracking-tight" style="color: var(--text-color);">Samyojak</span>
+          </div>
+          <div class="flex flex-wrap items-center justify-center gap-6 text-sm opacity-40">
+            <a href="#services" class="hover:opacity-100 transition-opacity">Services</a> <a href="#products"
+              class="hover:opacity-100 transition-opacity">Products</a> <a href="#about"
+              class="hover:opacity-100 transition-opacity">About</a> <a href="#contact"
+              class="hover:opacity-100 transition-opacity">Contact</a>
+          </div>
+          <p class="text-xs opacity-30">© 2026 PS & AP (PVT.LTD) . All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Chatbot Widget -->
+    <div id="chat-widget" class="fixed bottom-6 right-6 z-[100] flex flex-col items-end">
+      <!-- Chat Window -->
+      <div id="chat-window" class="hidden w-80 sm:w-96 glass-card rounded-2xl border mb-4 overflow-hidden shadow-2xl transition-all duration-300"
+        style="border-color: rgba(56,189,248,0.2); background: rgba(10, 14, 26, 0.95);">
+        <!-- Header -->
+        <div class="p-4 border-b flex justify-between items-center" style="border-color: rgba(255,255,255,0.06); background: rgba(56,189,248,0.05);">
+          <div class="flex items-center gap-2">
+            <div class="w-8 h-8 rounded-full flex items-center justify-center glow-accent" style="background: linear-gradient(135deg, var(--primary-action), var(--secondary-action));">
+              <i data-lucide="bot" style="width:16px;height:16px;color:#fff;"></i>
+            </div>
+            <span class="font-bold text-sm" style="color: var(--text-color);">Samyojak AI</span>
+          </div>
+          <button id="close-chat" class="opacity-50 hover:opacity-100 transition-opacity">
+            <i data-lucide="x" style="width:20px;height:20px;color:var(--text-color);"></i>
+          </button>
+        </div>
+        <!-- Messages -->
+        <div id="chat-messages" class="p-4 h-80 overflow-y-auto flex flex-col gap-3 scroll-smooth">
+          <div class="flex items-start gap-2 max-w-[85%]">
+            <div class="p-3 rounded-2xl rounded-tl-sm text-sm" style="background: rgba(56,189,248,0.05); border: 1px solid rgba(255,255,255,0.05); color: var(--text-color);">
+              Hi there! I'm the Samyojak AI assistant. How can I help you today?
+            </div>
+          </div>
+        </div>
+        <!-- Input -->
+        <div class="p-4 border-t" style="border-color: rgba(255,255,255,0.06);">
+          <form id="chat-form" class="flex gap-2">
+            <input type="text" id="chat-input" placeholder="Ask about our services..." required
+              class="flex-1 bg-transparent px-3 py-2 text-sm rounded-lg border focus:outline-none focus:ring-1 transition-all"
+              style="background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.08); color: var(--text-color); --tw-ring-color: var(--primary-action);">
+            <button type="submit" class="w-10 h-10 rounded-lg flex items-center justify-center btn-primary text-white flex-shrink-0">
+              <i data-lucide="send" style="width:16px;height:16px;"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+      <!-- Toggle Button -->
+      <!-- <button id="chat-toggle" class="w-14 h-14 rounded-full flex items-center justify-center btn-primary text-white shadow-xl hover:scale-105 transition-transform glow-accent" style="box-shadow: 0 4px 20px rgba(56, 189, 248, 0.4);">
+        <i data-lucide="message-square" style="width:24px;height:24px;"></i>
+      </button> -->
     </div>
-   </section><!-- Trusted By -->
-   <section class="py-12 border-y" style="border-color: rgba(255,255,255,0.04);">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-     <p class="text-center text-xs font-medium uppercase tracking-widest opacity-30 mb-8">Trusted by forward-thinking teams</p>
-     <div class="flex flex-wrap items-center justify-center gap-8 sm:gap-12 opacity-30">
-      <span class="font-bold text-lg tracking-tight">Acme Corp</span> <span class="font-bold text-lg tracking-tight">Vertex AI</span> <span class="font-bold text-lg tracking-tight">Lunar</span> <span class="font-bold text-lg tracking-tight">Streamline</span> <span class="font-bold text-lg tracking-tight">PixelForge</span>
-     </div>
-    </div>
-   </section><!-- Services Section -->
-   <section id="services" class="py-20 sm:py-28">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-     <div class="text-center max-w-2xl mx-auto mb-16 scroll-reveal">
-      <span class="text-xs font-mono font-medium uppercase tracking-widest" style="color: var(--primary-action);">Services</span>
-      <h2 class="text-3xl sm:text-4xl font-bold mt-3" style="color: var(--text-color);">Small Automations, Big Impact</h2>
-      <p class="mt-4 opacity-60 leading-relaxed">We identify bottlenecks in your workflow and replace them with custom, reliable automations — so you can focus on growth.</p>
-     </div><!-- Pricing Tiers -->
-     <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
-      <!-- Starter -->
-      <div class="scroll-reveal glass-card rounded-2xl p-6 sm:p-8 card-glow" style="border-color: rgba(255,255,255,0.08);">
-       <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5" style="background: rgba(56,189,248,0.15);">
-        <i data-lucide="mail" style="width:22px;height:22px;color:var(--primary-action);"></i>
-       </div>
-       <h3 class="text-xl font-bold" style="color: var(--text-color);">Starter</h3>
-       <p class="mt-2 text-sm opacity-50">Perfect for solopreneurs with simple workflow needs.</p>
-       <div class="mt-6 mb-6">
-        <span class="text-4xl font-extrabold" style="color: var(--text-color);">$299</span> <span class="text-sm opacity-40 ml-1">one-time</span>
-       </div>
-       <ul class="space-y-3 mb-8">
-        <li class="flex items-start gap-2.5 text-sm"><i data-lucide="check" style="width:16px;height:16px;color:var(--primary-action);flex-shrink:0;margin-top:2px;"></i><span class="opacity-70">1 Zapier / Make integration</span></li>
-        <li class="flex items-start gap-2.5 text-sm"><i data-lucide="check" style="width:16px;height:16px;color:var(--primary-action);flex-shrink:0;margin-top:2px;"></i><span class="opacity-70">Email workflow automation</span></li>
-        <li class="flex items-start gap-2.5 text-sm"><i data-lucide="check" style="width:16px;height:16px;color:var(--primary-action);flex-shrink:0;margin-top:2px;"></i><span class="opacity-70">Basic data sync</span></li>
-        <li class="flex items-start gap-2.5 text-sm"><i data-lucide="check" style="width:16px;height:16px;color:var(--primary-action);flex-shrink:0;margin-top:2px;"></i><span class="opacity-70">7-day delivery</span></li>
-       </ul><a href="#contact" class="block text-center w-full py-3 rounded-full text-sm font-semibold border transition-all hover:bg-white/5" style="color: var(--primary-action); border-color: rgba(56,189,248,0.3);">Get Started</a>
-      </div><!-- Professional (Featured) -->
-      <div class="scroll-reveal glass-card rounded-2xl p-6 sm:p-8 card-glow relative transition-all" style="border: 2px solid rgba(56,189,248,0.3);">
-       <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full text-xs font-bold text-white" style="background: linear-gradient(135deg, var(--primary-action), var(--secondary-action));">
-        Most Popular
-       </div>
-       <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5" style="background: rgba(56,189,248,0.15);">
-        <i data-lucide="settings" style="width:22px;height:22px;color:var(--primary-action);"></i>
-       </div>
-       <h3 class="text-xl font-bold" style="color: var(--text-color);">Professional</h3>
-       <p class="mt-2 text-sm opacity-50">Multi-step automations for growing teams.</p>
-       <div class="mt-6 mb-6">
-        <span class="text-4xl font-extrabold" style="color: var(--text-color);">$799</span> <span class="text-sm opacity-40 ml-1">one-time</span>
-       </div>
-       <ul class="space-y-3 mb-8">
-        <li class="flex items-start gap-2.5 text-sm"><i data-lucide="check" style="width:16px;height:16px;color:var(--primary-action);flex-shrink:0;margin-top:2px;"></i><span class="opacity-70">Up to 5 integrations</span></li>
-        <li class="flex items-start gap-2.5 text-sm"><i data-lucide="check" style="width:16px;height:16px;color:var(--primary-action);flex-shrink:0;margin-top:2px;"></i><span class="opacity-70">Data entry scripts</span></li>
-        <li class="flex items-start gap-2.5 text-sm"><i data-lucide="check" style="width:16px;height:16px;color:var(--primary-action);flex-shrink:0;margin-top:2px;"></i><span class="opacity-70">CRM &amp; calendar sync</span></li>
-        <li class="flex items-start gap-2.5 text-sm"><i data-lucide="check" style="width:16px;height:16px;color:var(--primary-action);flex-shrink:0;margin-top:2px;"></i><span class="opacity-70">30-day support included</span></li>
-       </ul><a href="#contact" class="btn-primary block text-center w-full py-3 rounded-full text-sm font-semibold text-white">Get Started</a>
-      </div><!-- Enterprise -->
-      <div class="scroll-reveal glass-card rounded-2xl p-6 sm:p-8 card-glow" style="border-color: rgba(255,255,255,0.08);">
-       <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5" style="background: rgba(167,139,250,0.15);">
-        <i data-lucide="layers" style="width:22px;height:22px;color:var(--secondary-action);"></i>
-       </div>
-       <h3 class="text-xl font-bold" style="color: var(--text-color);">Enterprise</h3>
-       <p class="mt-2 text-sm opacity-50">Full-scale automation suites for complex ops.</p>
-       <div class="mt-6 mb-6">
-        <span class="text-4xl font-extrabold" style="color: var(--text-color);">Custom</span>
-       </div>
-       <ul class="space-y-3 mb-8">
-        <li class="flex items-start gap-2.5 text-sm"><i data-lucide="check" style="width:16px;height:16px;color:var(--secondary-action);flex-shrink:0;margin-top:2px;"></i><span class="opacity-70">Unlimited integrations</span></li>
-        <li class="flex items-start gap-2.5 text-sm"><i data-lucide="check" style="width:16px;height:16px;color:var(--secondary-action);flex-shrink:0;margin-top:2px;"></i><span class="opacity-70">Custom scripts &amp; API work</span></li>
-        <li class="flex items-start gap-2.5 text-sm"><i data-lucide="check" style="width:16px;height:16px;color:var(--secondary-action);flex-shrink:0;margin-top:2px;"></i><span class="opacity-70">Dedicated project manager</span></li>
-        <li class="flex items-start gap-2.5 text-sm"><i data-lucide="check" style="width:16px;height:16px;color:var(--secondary-action);flex-shrink:0;margin-top:2px;"></i><span class="opacity-70">90-day priority support</span></li>
-       </ul><a href="#contact" class="block text-center w-full py-3 rounded-full text-sm font-semibold border transition-all hover:bg-white/5" style="color: var(--secondary-action); border-color: rgba(167,139,250,0.3);">Contact Sales</a>
-      </div>
-     </div><!-- Problem vs Solution -->
-     <div class="mt-20 grid md:grid-cols-2 gap-8">
-      <div class="scroll-reveal glass-card rounded-2xl p-8" style="background: rgba(239, 68, 68, 0.08); border-color: rgba(239, 68, 68, 0.2);">
-       <div class="flex items-center gap-3 mb-5">
-        <i data-lucide="x-circle" style="width:22px;height:22px;color:#ef4444;"></i>
-        <h3 class="text-lg font-bold" style="color: #ef4444;">The Problem</h3>
-       </div>
-       <ul class="space-y-3">
-        <li class="flex items-start gap-2.5 text-sm opacity-70"><span>•</span>Hours wasted on manual data entry every week</li>
-        <li class="flex items-start gap-2.5 text-sm opacity-70"><span>•</span>Missed follow-ups due to disconnected tools</li>
-        <li class="flex items-start gap-2.5 text-sm opacity-70"><span>•</span>Error-prone spreadsheets slowing your team</li>
-        <li class="flex items-start gap-2.5 text-sm opacity-70"><span>•</span>Scaling feels impossible without more hires</li>
-       </ul>
-      </div>
-      <div class="scroll-reveal glass-card rounded-2xl p-8" style="background: rgba(56, 189, 248, 0.08); border-color: rgba(56, 189, 248, 0.2);">
-       <div class="flex items-center gap-3 mb-5">
-        <i data-lucide="check-circle" style="width:22px;height:22px;color:var(--primary-action);"></i>
-        <h3 class="text-lg font-bold" style="color: var(--primary-action);">Our Solution</h3>
-       </div>
-       <ul class="space-y-3">
-        <li class="flex items-start gap-2.5 text-sm opacity-70"><span>•</span>Automated data flows between all your tools</li>
-        <li class="flex items-start gap-2.5 text-sm opacity-70"><span>•</span>Smart triggers that never miss a follow-up</li>
-        <li class="flex items-start gap-2.5 text-sm opacity-70"><span>•</span>Error-free processes running 24/7</li>
-        <li class="flex items-start gap-2.5 text-sm opacity-70"><span>•</span>Scale operations without scaling headcount</li>
-       </ul>
-      </div>
-     </div>
-    </div>
-   </section><!-- Products Section -->
-   <section id="products" class="py-20 sm:py-28 border-t" style="border-color: rgba(255,255,255,0.04);">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-     <div class="text-center max-w-2xl mx-auto mb-16 scroll-reveal">
-      <span class="text-xs font-mono font-medium uppercase tracking-widest" style="color: var(--secondary-action);">Products</span>
-      <h2 class="text-3xl sm:text-4xl font-bold mt-3" style="color: var(--text-color);">Our Apps</h2>
-      <p class="mt-4 opacity-60 leading-relaxed">Purpose-built applications designed to solve real business problems, right out of the box.</p>
-     </div>
-     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- Product 1 -->
-      <div class="scroll-reveal product-card glass-card rounded-2xl border overflow-hidden card-glow">
-       <div class="h-44 flex items-center justify-center" style="background: linear-gradient(135deg, rgba(56,189,248,0.2), rgba(168,85,247,0.12));">
-        <div class="w-20 h-20 rounded-2xl flex items-center justify-center" style="background: rgba(56,189,248,0.25);">
-         <i data-lucide="bar-chart-3" style="width:36px;height:36px;color:var(--primary-action);"></i>
-        </div>
-       </div>
-       <div class="p-6">
-        <div class="flex items-center justify-between mb-2">
-         <h3 class="text-lg font-bold" style="color: var(--text-color);">FlowMetrics</h3><span class="text-xs font-mono px-2 py-0.5 rounded-full glass-card" style="border: 1px solid rgba(56,189,248,0.2); color: var(--primary-action);">v2.1</span>
-        </div>
-        <p class="text-sm opacity-50 mb-4 leading-relaxed">Real-time dashboard for tracking automation KPIs and ROI across all your workflows.</p>
-        <div class="flex items-center justify-between">
-         <span class="text-2xl font-bold" style="color: var(--text-color);">$49<span class="text-sm font-normal opacity-40">/mo</span></span> <button class="btn-primary px-5 py-2 rounded-full text-sm font-semibold text-white" onclick="handleBuy('FlowMetrics')">Buy Now</button>
-        </div>
-       </div>
-      </div><!-- Product 2 -->
-      <div class="scroll-reveal product-card glass-card rounded-2xl border overflow-hidden card-glow">
-       <div class="h-44 flex items-center justify-center" style="background: linear-gradient(135deg, rgba(167,139,250,0.2), rgba(236,72,153,0.12));">
-        <div class="w-20 h-20 rounded-2xl flex items-center justify-center" style="background: rgba(167,139,250,0.25);">
-         <i data-lucide="file-text" style="width:36px;height:36px;color:var(--secondary-action);"></i>
-        </div>
-       </div>
-       <div class="p-6">
-        <div class="flex items-center justify-between mb-2">
-         <h3 class="text-lg font-bold" style="color: var(--text-color);">DocPilot</h3><span class="text-xs font-mono px-2 py-0.5 rounded-full glass-card" style="border: 1px solid rgba(167,139,250,0.2); color: var(--secondary-action);">v1.4</span>
-        </div>
-        <p class="text-sm opacity-50 mb-4 leading-relaxed">Auto-generate proposals, invoices, and contracts from your CRM data in seconds.</p>
-        <div class="flex items-center justify-between">
-         <span class="text-2xl font-bold" style="color: var(--text-color);">$29<span class="text-sm font-normal opacity-40">/mo</span></span> <button class="btn-primary px-5 py-2 rounded-full text-sm font-semibold text-white" onclick="handleBuy('DocPilot')">Buy Now</button>
-        </div>
-       </div>
-      </div><!-- Product 3 -->
-      <div class="scroll-reveal product-card glass-card rounded-2xl border overflow-hidden card-glow">
-       <div class="h-44 flex items-center justify-center" style="background: linear-gradient(135deg, rgba(52,211,153,0.2), rgba(56,189,248,0.12));">
-        <div class="w-20 h-20 rounded-2xl flex items-center justify-center" style="background: rgba(52,211,153,0.25);">
-         <i data-lucide="shield" style="width:36px;height:36px;color:#34d399;"></i>
-        </div>
-       </div>
-       <div class="p-6">
-        <div class="flex items-center justify-between mb-2">
-         <h3 class="text-lg font-bold" style="color: var(--text-color);">SyncGuard</h3><span class="text-xs font-mono px-2 py-0.5 rounded-full glass-card" style="border: 1px solid rgba(52,211,153,0.2); color: #34d399;">v3.0</span>
-        </div>
-        <p class="text-sm opacity-50 mb-4 leading-relaxed">Monitor and protect all your integrations with real-time error alerts and auto-recovery.</p>
-        <div class="flex items-center justify-between">
-         <span class="text-2xl font-bold" style="color: var(--text-color);">$39<span class="text-sm font-normal opacity-40">/mo</span></span> <button class="btn-primary px-5 py-2 rounded-full text-sm font-semibold text-white" onclick="handleBuy('SyncGuard')">Buy Now</button>
-        </div>
-       </div>
-      </div>
-     </div><!-- Demo checkout toast -->
-     <div id="buy-toast" class="fixed bottom-6 right-6 z-50 px-6 py-4 rounded-2xl shadow-2xl transition-all duration-500 opacity-0 translate-y-4 pointer-events-none glass-card" style="border: 1px solid rgba(56,189,248,0.2);">
-      <div class="flex items-center gap-3">
-       <div class="w-8 h-8 rounded-full flex items-center justify-center" style="background: rgba(56,189,248,0.15);">
-        <i data-lucide="shopping-cart" style="width:16px;height:16px;color:var(--primary-action);"></i>
-       </div>
-       <div>
-        <p class="text-sm font-semibold" style="color: var(--text-color);" id="buy-toast-text">Added to cart!</p>
-        <p class="text-xs opacity-50">Demo — payment integration ready</p>
-       </div>
-      </div>
-     </div>
-    </div>
-   </section><!-- Testimonials -->
-   <section class="py-20 sm:py-28 border-t" style="border-color: rgba(255,255,255,0.04);">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-     <div class="text-center mb-16 scroll-reveal">
-      <span class="text-xs font-mono font-medium uppercase tracking-widest" style="color: var(--primary-action);">Testimonials</span>
-      <h2 class="text-3xl sm:text-4xl font-bold mt-3" style="color: var(--text-color);">What Our Clients Say</h2>
-     </div>
-     <div class="grid md:grid-cols-3 gap-6">
-      <div class="scroll-reveal glass-card rounded-2xl p-6 card-glow">
-       <div class="flex gap-1 mb-4">
-        <i data-lucide="star" style="width:16px;height:16px;color:#fbbf24;fill:#fbbf24;"></i> <i data-lucide="star" style="width:16px;height:16px;color:#fbbf24;fill:#fbbf24;"></i> <i data-lucide="star" style="width:16px;height:16px;color:#fbbf24;fill:#fbbf24;"></i> <i data-lucide="star" style="width:16px;height:16px;color:#fbbf24;fill:#fbbf24;"></i> <i data-lucide="star" style="width:16px;height:16px;color:#fbbf24;fill:#fbbf24;"></i>
-       </div>
-       <p class="text-sm opacity-60 leading-relaxed mb-5">"Samyojak automated our entire client onboarding. What took 3 hours now takes 5 minutes. Absolute game-changer."</p>
-       <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold text-white" style="background: linear-gradient(135deg, var(--primary-action), var(--secondary-action));">
-         JR
-        </div>
-        <div>
-         <p class="text-sm font-semibold" style="color: var(--text-color);">James R.</p>
-         <p class="text-xs opacity-40">CEO, Vertex AI</p>
-        </div>
-       </div>
-      </div>
-      <div class="scroll-reveal glass-card rounded-2xl p-6 card-glow">
-       <div class="flex gap-1 mb-4">
-        <i data-lucide="star" style="width:16px;height:16px;color:#fbbf24;fill:#fbbf24;"></i> <i data-lucide="star" style="width:16px;height:16px;color:#fbbf24;fill:#fbbf24;"></i> <i data-lucide="star" style="width:16px;height:16px;color:#fbbf24;fill:#fbbf24;"></i> <i data-lucide="star" style="width:16px;height:16px;color:#fbbf24;fill:#fbbf24;"></i> <i data-lucide="star" style="width:16px;height:16px;color:#fbbf24;fill:#fbbf24;"></i>
-       </div>
-       <p class="text-sm opacity-60 leading-relaxed mb-5">"DocPilot generates our proposals in seconds. Our sales team can't imagine going back to the old way."</p>
-       <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold text-white" style="background: linear-gradient(135deg, #34d399, var(--primary-action));">
-         SM
-        </div>
-        <div>
-         <p class="text-sm font-semibold" style="color: var(--text-color);">Sarah M.</p>
-         <p class="text-xs opacity-40">VP Sales, Streamline</p>
-        </div>
-       </div>
-      </div>
-      <div class="scroll-reveal glass-card rounded-2xl p-6 card-glow">
-       <div class="flex gap-1 mb-4">
-        <i data-lucide="star" style="width:16px;height:16px;color:#fbbf24;fill:#fbbf24;"></i> <i data-lucide="star" style="width:16px;height:16px;color:#fbbf24;fill:#fbbf24;"></i> <i data-lucide="star" style="width:16px;height:16px;color:#fbbf24;fill:#fbbf24;"></i> <i data-lucide="star" style="width:16px;height:16px;color:#fbbf24;fill:#fbbf24;"></i> <i data-lucide="star" style="width:16px;height:16px;color:#fbbf24;fill:#fbbf24;"></i>
-       </div>
-       <p class="text-sm opacity-60 leading-relaxed mb-5">"Their enterprise automation saved us $120K/year in manual operations. ROI within 2 months."</p>
-       <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold text-white" style="background: linear-gradient(135deg, var(--secondary-action), #ec4899);">
-         DL
-        </div>
-        <div>
-         <p class="text-sm font-semibold" style="color: var(--text-color);">David L.</p>
-         <p class="text-xs opacity-40">COO, Acme Corp</p>
-        </div>
-       </div>
-      </div>
-     </div>
-    </div>
-   </section><!-- About Section -->
-   <section id="about" class="py-20 sm:py-28 border-t" style="border-color: rgba(255,255,255,0.04);">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-     <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-      <div class="scroll-reveal">
-       <span class="text-xs font-mono font-medium uppercase tracking-widest" style="color: var(--primary-action);">About Us</span>
-       <h2 class="text-3xl sm:text-4xl font-bold mt-3 mb-6" style="color: var(--text-color);">Built by Operators, for Operators</h2>
-       <p id="about-mission" class="opacity-60 leading-relaxed mb-4">Our mission is simple: eliminate busywork so businesses can focus on what actually moves the needle — strategy, creativity, and growth.</p>
-       <p id="about-story" class="opacity-60 leading-relaxed mb-8">Samyojak started in 2021 when our founders — ex-operations leads at fast-growing startups — kept building the same automations over and over. We turned that expertise into a service, then into software. Today we serve 50+ companies across 12 industries.</p>
-       <div class="flex flex-wrap gap-4">
-        <div class="flex items-center gap-2 px-4 py-2 rounded-full text-sm" style="background: rgba(56,189,248,0.08); color: var(--primary-action);">
-         <i data-lucide="target" style="width:16px;height:16px;"></i> Mission-Driven
-        </div>
-        <div class="flex items-center gap-2 px-4 py-2 rounded-full text-sm" style="background: rgba(167,139,250,0.08); color: var(--secondary-action);">
-         <i data-lucide="globe" style="width:16px;height:16px;"></i> Remote-First
-        </div>
-        <div class="flex items-center gap-2 px-4 py-2 rounded-full text-sm" style="background: rgba(52,211,153,0.08); color: #34d399;">
-         <i data-lucide="lock" style="width:16px;height:16px;"></i> SOC 2 Compliant
-        </div>
-       </div>
-      </div><!-- Team Grid -->
-      <div class="scroll-reveal grid grid-cols-2 gap-4">
-       <div class="group glass-card rounded-2xl p-8 text-center overflow-hidden border transition-all hover:border-opacity-100" style="border-color: rgba(56,189,248,0.25); background: rgba(56,189,248,0.08);">
-        <div class="relative mb-6">
-         <div class="w-28 h-28 mx-auto rounded-full flex items-center justify-center text-4xl font-bold text-white transition-transform group-hover:scale-110" style="background: linear-gradient(135deg, var(--primary-action), var(--secondary-action)); box-shadow: 0 0 40px rgba(56,189,248,0.4);">
-          PS
-         </div>
-        </div>
-        <p class="text-base font-bold leading-tight" style="color: var(--text-color);">Pranav Shinde</p>
-        <p class="text-xs opacity-50 mt-1.5 font-medium">Co-Founder &amp; Co-CEO</p>
-        <p class="text-xs opacity-40 mt-3 leading-relaxed">Ex-Ops Lead, Built 50+ automations</p>
-       </div>
-       <div class="group glass-card rounded-2xl p-8 text-center overflow-hidden border transition-all hover:border-opacity-100" style="border-color: rgba(167,139,250,0.25); background: rgba(167,139,250,0.08);">
-        <div class="relative mb-6">
-         <div class="w-28 h-28 mx-auto rounded-full flex items-center justify-center text-4xl font-bold text-white transition-transform group-hover:scale-110" style="background: linear-gradient(135deg, #34d399, var(--primary-action)); box-shadow: 0 0 40px rgba(52,211,153,0.4);">
-          AP
-         </div>
-        </div>
-        <p class="text-base font-bold leading-tight" style="color: var(--text-color);">Aditya Patil</p>
-        <p class="text-xs opacity-50 mt-1.5 font-medium">Co-Founder &amp; Co-CEO</p>
-        <p class="text-xs opacity-40 mt-3 leading-relaxed">Growth Expert, 10+ Startups</p>
-       </div>
-      </div>
-     </div>
-    </div>
-   </section><!-- Contact Section -->
-   <section id="contact" class="py-20 sm:py-28 border-t" style="border-color: rgba(255,255,255,0.04);">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-     <div class="grid lg:grid-cols-2 gap-12 lg:gap-20">
-      <div class="scroll-reveal">
-       <span class="text-xs font-mono font-medium uppercase tracking-widest" style="color: var(--primary-action);">Contact</span>
-       <h2 class="text-3xl sm:text-4xl font-bold mt-3 mb-6" style="color: var(--text-color);">Let's Build Something Together</h2>
-       <p class="opacity-60 leading-relaxed mb-8">Have a workflow you want to automate? A custom app idea? Reach out — we typically respond within 4 hours.</p>
-       <div class="space-y-5">
-        <div class="flex items-center gap-4">
-         <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background: rgba(56,189,248,0.1);">
-          <i data-lucide="mail" style="width:18px;height:18px;color:var(--primary-action);"></i>
-         </div>
-         <div>
-          <p class="text-xs opacity-40">Email</p>
-          <p id="contact-email-display" class="text-sm font-medium" style="color: var(--text-color);">samyojak7@gmail.com</p>
-         </div>
-        </div>
-        <div class="flex items-center gap-4">
-         <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background: rgba(167,139,250,0.1);">
-          <i data-lucide="phone" style="width:18px;height:18px;color:var(--secondary-action);"></i>
-         </div>
-         <div>
-          <p class="text-xs opacity-40">Phone</p>
-          <p id="contact-phone-display" class="text-sm font-medium" style="color: var(--text-color);">+91</p>
-         </div>
-        </div>
-        <div class="flex items-center gap-4">
-         <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background: rgba(52,211,153,0.1);">
-          <i data-lucide="map-pin" style="width:18px;height:18px;color:#34d399;"></i>
-         </div>
-         <div>
-          <p class="text-xs opacity-40">Location</p>
-          <p class="text-sm font-medium" style="color: var(--text-color);">Gadhinglaj, Dist: Kolhapur</p>
-         </div>
-        </div>
-       </div><!-- Social Links -->
-       <div class="flex items-center gap-3 mt-8">
-        <a href="#" class="w-10 h-10 rounded-xl flex items-center justify-center border transition-all hover:bg-white/5" style="border-color: rgba(255,255,255,0.08);"> <i data-lucide="twitter" style="width:16px;height:16px;color:var(--text-color);opacity:0.5;"></i> </a> <a href="#" class="w-10 h-10 rounded-xl flex items-center justify-center border transition-all hover:bg-white/5" style="border-color: rgba(255,255,255,0.08);"> <i data-lucide="linkedin" style="width:16px;height:16px;color:var(--text-color);opacity:0.5;"></i> </a> <a href="#" class="w-10 h-10 rounded-xl flex items-center justify-center border transition-all hover:bg-white/5" style="border-color: rgba(255,255,255,0.08);"> <i data-lucide="github" style="width:16px;height:16px;color:var(--text-color);opacity:0.5;"></i> </a> <a href="#" class="w-10 h-10 rounded-xl flex items-center justify-center border transition-all hover:bg-white/5" style="border-color: rgba(255,255,255,0.08);"> <i data-lucide="instagram" style="width:16px;height:16px;color:var(--text-color);opacity:0.5;"></i> </a>
-       </div>
-      </div><!-- Contact Form -->
-      <div class="scroll-reveal">
-       <form id="contact-form" class="rounded-2xl p-6 sm:p-8 border" style="background: var(--surface-color); border-color: rgba(255,255,255,0.06);">
-        <div class="space-y-5">
-         <div>
-          <label for="form-name" class="block text-sm font-medium mb-2 opacity-70">Full Name</label> <input type="text" id="form-name" required class="w-full px-4 py-3 rounded-xl text-sm border focus:outline-none focus:ring-2 transition-all" style="background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.08); color: var(--text-color); --tw-ring-color: var(--primary-action);" placeholder="John Doe">
-         </div>
-         <div>
-          <label for="form-email" class="block text-sm font-medium mb-2 opacity-70">Email Address</label> <input type="email" id="form-email" required class="w-full px-4 py-3 rounded-xl text-sm border focus:outline-none focus:ring-2 transition-all" style="background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.08); color: var(--text-color); --tw-ring-color: var(--primary-action);" placeholder="john@company.com">
-         </div>
-         <div>
-          <label for="form-service" class="block text-sm font-medium mb-2 opacity-70">Service Interested In</label> <select id="form-service" class="w-full px-4 py-3 rounded-xl text-sm border focus:outline-none focus:ring-2 transition-all" style="background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.08); color: var(--text-color); --tw-ring-color: var(--primary-action);"> <option value="" style="background: #111827;">Select a service...</option> <option value="starter" style="background: #111827;">Starter Automation ($299)</option> <option value="professional" style="background: #111827;">Professional Automation ($799)</option> <option value="enterprise" style="background: #111827;">Enterprise (Custom)</option> <option value="app" style="background: #111827;">App Purchase / Demo</option> <option value="other" style="background: #111827;">Other</option> </select>
-         </div>
-         <div>
-          <label for="form-message" class="block text-sm font-medium mb-2 opacity-70">Message</label> <textarea id="form-message" rows="4" required class="w-full px-4 py-3 rounded-xl text-sm border focus:outline-none focus:ring-2 transition-all resize-none" style="background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.08); color: var(--text-color); --tw-ring-color: var(--primary-action);" placeholder="Tell us about your project..."></textarea>
-         </div><button type="submit" id="submit-btn" class="btn-primary w-full py-3.5 rounded-xl text-sm font-semibold text-white flex items-center justify-center gap-2"> <i data-lucide="send" style="width:16px;height:16px;"></i> Send Message </button>
-        </div><!-- Form Success -->
-        <div id="form-success" class="hidden text-center py-8">
-         <div class="w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4" style="background: rgba(52,211,153,0.15);">
-          <i data-lucide="check" style="width:28px;height:28px;color:#34d399;"></i>
-         </div>
-         <h3 class="text-lg font-bold mb-2" style="color: var(--text-color);">Message Sent!</h3>
-         <p class="text-sm opacity-50">We'll get back to you within 4 hours.</p>
-        </div>
-       </form>
-      </div>
-     </div>
-    </div>
-   </section><!-- Footer -->
-   <footer class="py-12 border-t" style="border-color: rgba(255,255,255,0.04);">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-     <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-      <div class="flex items-center gap-2">
-       <div class="w-7 h-7 rounded-lg flex items-center justify-center" style="background: linear-gradient(135deg, var(--primary-action), var(--secondary-action));">
-        <i data-lucide="zap" style="width:14px;height:14px;color:#fff;"></i>
-       </div><span class="font-bold tracking-tight" style="color: var(--text-color);">Samyojak</span>
-      </div>
-      <div class="flex flex-wrap items-center justify-center gap-6 text-sm opacity-40">
-       <a href="#services" class="hover:opacity-100 transition-opacity">Services</a> <a href="#products" class="hover:opacity-100 transition-opacity">Products</a> <a href="#about" class="hover:opacity-100 transition-opacity">About</a> <a href="#contact" class="hover:opacity-100 transition-opacity">Contact</a>
-      </div>
-      <p class="text-xs opacity-30">© 2026 PS & AP (PVT.LTD) . All rights reserved.</p>
-     </div>
-    </div>
-   </footer>
+
   </div>
   <script>
     // Default config
@@ -698,8 +1014,8 @@
 
     // Element SDK init - fallback for local testing
     const initSDK = () => {
-      const config = { ...defaultConfig };
-      
+      const config = {...defaultConfig};
+
       const applyConfigChanges = (updates) => {
         Object.assign(config, updates);
         applyConfig(config);
@@ -730,33 +1046,33 @@
         recolorables: [
           {
             get: () => config.background_color || defaultConfig.background_color,
-            set: (v) => { config.background_color = v; window.elementSdk.setConfig({ background_color: v }); }
+            set: (v) => {config.background_color = v; window.elementSdk.setConfig({background_color: v});}
           },
           {
             get: () => config.surface_color || defaultConfig.surface_color,
-            set: (v) => { config.surface_color = v; window.elementSdk.setConfig({ surface_color: v }); }
+            set: (v) => {config.surface_color = v; window.elementSdk.setConfig({surface_color: v});}
           },
           {
             get: () => config.text_color || defaultConfig.text_color,
-            set: (v) => { config.text_color = v; window.elementSdk.setConfig({ text_color: v }); }
+            set: (v) => {config.text_color = v; window.elementSdk.setConfig({text_color: v});}
           },
           {
             get: () => config.primary_action_color || defaultConfig.primary_action_color,
-            set: (v) => { config.primary_action_color = v; window.elementSdk.setConfig({ primary_action_color: v }); }
+            set: (v) => {config.primary_action_color = v; window.elementSdk.setConfig({primary_action_color: v});}
           },
           {
             get: () => config.secondary_action_color || defaultConfig.secondary_action_color,
-            set: (v) => { config.secondary_action_color = v; window.elementSdk.setConfig({ secondary_action_color: v }); }
+            set: (v) => {config.secondary_action_color = v; window.elementSdk.setConfig({secondary_action_color: v});}
           }
         ],
         borderables: [],
         fontEditable: {
           get: () => config.font_family || defaultConfig.font_family,
-          set: (v) => { config.font_family = v; window.elementSdk.setConfig({ font_family: v }); }
+          set: (v) => {config.font_family = v; window.elementSdk.setConfig({font_family: v});}
         },
         fontSizeable: {
           get: () => config.font_size || defaultConfig.font_size,
-          set: (v) => { config.font_size = v; window.elementSdk.setConfig({ font_size: v }); }
+          set: (v) => {config.font_size = v; window.elementSdk.setConfig({font_size: v});}
         }
       }),
       mapToEditPanelValues: (config) => new Map([
@@ -807,6 +1123,13 @@
       }, 3000);
     }
 
+    // Trial button handler
+    function handleTrial(productName) {
+      // Redirect to your other website.
+      // Be sure to replace this placeholder URL with your actual URL!
+      window.location.href = `https://autoreply-bot.netlify.app/login.html`;
+    }
+
     // Scroll reveal observer
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -814,12 +1137,101 @@
           entry.target.classList.add('revealed');
         }
       });
-    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    }, {threshold: 0.1, rootMargin: '0px 0px -40px 0px'});
 
     document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+
+    // --- Chatbot Logic ---
+    // The "knowledge base" containing all contextual information
+    const companyContext = `
+      You are Samyojak AI Assistant.
+      Samyojak builds small, custom automations and apps.
+      Services: Starter (₹299), Professional (₹799), Enterprise (Custom).
+      Products: Auto Reply Bot (₹499/mo), DocPilot (₹299/mo), SyncGuard (₹399/mo).
+      Founders: Pranav Shinde & Aditya Patil.
+      Contact: samyojak7@gmail.com, +91 9226222437. Location: Gadhinglaj, Kolhapur.
+    `;
+
+    const chatToggle = document.getElementById('chat-toggle');
+    const chatWindow = document.getElementById('chat-window');
+    const closeChat = document.getElementById('close-chat');
+    const chatForm = document.getElementById('chat-form');
+    const chatInput = document.getElementById('chat-input');
+    const chatMessages = document.getElementById('chat-messages');
+
+    if (chatToggle) {
+      chatToggle.addEventListener('click', () => {
+        chatWindow.classList.toggle('hidden');
+        if (!chatWindow.classList.contains('hidden')) {
+          chatInput.focus();
+        }
+      });
+    }
+
+    if (closeChat) {
+      closeChat.addEventListener('click', () => {
+        chatWindow.classList.add('hidden');
+      });
+    }
+
+    function addChatMessage(text, isUser) {
+      const msgDiv = document.createElement('div');
+      msgDiv.className = `flex items-start gap-2 max-w-[85%] ${isUser ? 'ml-auto flex-row-reverse' : ''}`;
+
+      const bubble = document.createElement('div');
+      bubble.className = `p-3 rounded-2xl text-sm leading-relaxed ${isUser ? 'rounded-tr-sm text-white' : 'rounded-tl-sm text-gray-200'}`;
+      
+      if (isUser) {
+        bubble.style.background = 'linear-gradient(135deg, var(--primary-action), var(--secondary-action))';
+        bubble.style.border = '1px solid rgba(56,189,248,0.4)';
+      } else {
+        bubble.style.background = 'rgba(56,189,248,0.05)';
+        bubble.style.border = '1px solid rgba(255,255,255,0.05)';
+      }
+      
+      bubble.textContent = text;
+      msgDiv.appendChild(bubble);
+      chatMessages.appendChild(msgDiv);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    // AI response logic fetching from your local Python AI Server
+    async function getChatbotResponse(userMessage) {
+      try {
+        const response = await fetch('http://127.0.0.1:5001/api/chat', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ message: userMessage })
+        });
+        const data = await response.json();
+        return data.reply || "Sorry, I didn't get a valid response.";
+      } catch (error) {
+        console.error("Chatbot API Error:", error);
+        return "Sorry, I am having trouble connecting to my local AI server right now. Make sure chatbot.py is running.";
+      }
+    }
+
+    if (chatForm) {
+      chatForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const text = chatInput.value.trim();
+        if (!text) return;
+
+        addChatMessage(text, true);
+        chatInput.value = '';
+
+        // Simulate network request delay before AI responds
+        setTimeout(async () => {
+          const reply = await getChatbotResponse(text);
+          addChatMessage(reply, false);
+        }, 600);
+      });
+    }
 
     // Init Lucide icons
     lucide.createIcons();
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9de97f66c2b4e565',t:'MTc3Mzg5MjA2Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+  <script>(function () {function c() {var b = a.contentDocument || a.contentWindow.document; if (b) {var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'9de97f66c2b4e565',t:'MTc3Mzg5MjA2Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d)} } if (document.body) {var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else {var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) {e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c())}} } })();</script>
+</body>
+
 </html>
